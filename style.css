@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300;1,400&display=swap');
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #D2CEC9;
+  margin: 0;
+  font-family: 'Roboto',sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container{
+  padding: 30px;
+  max-width: 80%;
+}
+.container .faq{
+  background-color: transparent ;
+  border: 2px solid black;
+  border-radius: 10px;
+  min-width: 1000px;
+  margin: 15px;
+  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  transition:  .5s ease;
+}
+h3{
+  margin: 25px 0 30px;
+  text-align: center;
+}
+
+.faq.active{
+  background-color: white;
+
+}
+.faq.active::before, .faq.active::after{
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color:rgb(235, 78, 115);
+  font-size: 7.5rem;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  opacity: .2;
+  
+}
+.faq.active::after{
+  color: #53E180;
+  top: -10px;
+  left: -10px;
+  transform: rotateY(180deg);
+}
+.title{
+  margin: 0 35px 0 0 ;
+}
+.answer{
+  display: none;
+  margin: 30px 0 0;
+}
+.faq.active .answer{
+  display: block;
+}
+.btn{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 2px;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}
+.btn .fa-chevron-down{
+  color: white;
+  border: .5px solid ;
+  border-radius: 50%;
+  background-color: lightgray;
+  padding: 3px;
+}
+.btn .fa-times{
+  display: none;
+}
+.faq.active .btn .fa-times{
+  display: block;
+}
+.faq.active .btn .fa-chevron-down{
+  display: none;
+}
